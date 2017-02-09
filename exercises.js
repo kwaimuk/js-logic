@@ -433,6 +433,24 @@ console.log(sumItUp(numArray));
   var east = [];
   var west = [];
 
+function allStars(ballers){
+	for( var i= 0; i<ballers.length;i++){
+		
+		if(i%2 === 0){
+			east.push(ballers[i]);
+		}else{
+			west.push(ballers[i]);
+		}
+	}
+}
+allStars(players);
+console.log("east",east);
+console.log("west",west);
+  /**for(pl=0 ; pl<players.length;pl++){
+  		if(pl%2 === 0 ){console.log(players[pl]);
+  		}
+  }**/
+
 /*
  * #19
  * Function - subways
@@ -446,7 +464,17 @@ console.log(sumItUp(numArray));
 */ 
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
-
+function subways(special){
+	for(var i=0; i<special.length; i++){
+		if(i%2 === 1){
+			/*special[i]=("Classic Tuna");*/
+			special.splice(i,1,"Classic Tuna");
+		}
+	}
+	return special;
+}
+subways(subOftheDay);
+console.log(subOftheDay); 
 
 /*
 Final Boss
