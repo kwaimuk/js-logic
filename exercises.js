@@ -31,14 +31,13 @@ if(today === "Friday"){
 
 function canVote(age){
 	if(age >= 18){
-	return true;
-}else{
-
-	return false;
+		return true;
+	}else{
+		return false;
+	}
 }
-}
-console.log(canVote(19));
-console.log(canVote(17));
+console.log("can vote: "+canVote(19));
+console.log("can vote: "+canVote(17));
 
 /*
  * #2
@@ -51,17 +50,17 @@ console.log(canVote(17));
  * The function will return the message: "Login Success!", if the string passed into the function is "test1234"
  * Console.log your result.
 */
-var password = "test1234";  
-var input = "test1222";
+ 
+
 function login(password){ 
-	if(password === input){
+	if(password === "test1234"){
 		return "Login Success!";
 	}else{
 		return "error";
 	}
 	}
 
-	console.log(login(password));
+	console.log(login("test1234"));
 
 /*
  * #3
@@ -77,13 +76,11 @@ function login(password){
 */
 function isGreaterThan(first, second){
 	if (first>second){
-		return "yes";
-	}else{
-		return "no";
+		return true;
 	}
 	}
 
-console.log(isGreaterThan(3,4));
+console.log(isGreaterThan(5,4));
 
 /*
  * #4
@@ -120,9 +117,7 @@ console.log(mustBeTrue(value1));
 function bigBird(word){
 	if(word.length === 3){
 		return "Word to the Big Bird!";
-	}else{
-		return "Big Bird is not down with that!";
-	}
+		}
 	}
 console.log(bigBird("one"));
 console.log(bigBird("four"));
@@ -339,14 +334,13 @@ var doughnutBought = 0;
 
 
 function buyDoughnut(){
-	if(budget >= doughnutPrice){
-		
+	if(budget >= doughnutPrice){	
 		budget = budget - doughnutPrice;
 		doughnutBought++;
 		return;
-	}else{
-		return "no more money";
-	}
+			}else{
+				return "no more money";
+			}
 }
 
 
@@ -409,7 +403,19 @@ for (var food = 0; food<myFavFoods.length; food++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
+var numArray = [22,33,44,55,66];
+var total = 0;
 
+function sumItUp(arr){
+	for( we = 0; we<arr.length ;we++){
+		total += arr[ we ]; // total = total + arr
+	}
+	return total;
+}
+
+console.log(sumItUp(numArray));
+/**
+}
 
 /*
  * #18
