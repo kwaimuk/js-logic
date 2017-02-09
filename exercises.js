@@ -392,8 +392,9 @@ for (var p = 1; p<6; p++){
  * Create a for loop that will iterate and console.log each item in the array below:
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
-
-
+for (var food = 0; food<myFavFoods.length; food++){
+	console.log("Item:"+ myFavFoods[food]);
+}
 /*
  * #17
  * Function - sumItUp
